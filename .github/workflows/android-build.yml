@@ -17,7 +17,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # Removed cache: 'npm' to fix the "Dependencies lock file is not found" error
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -33,6 +32,13 @@ jobs:
 
       - name: Initialize Capacitor Android
         run: |
+          # Ensure capacitor is initialized and the app id is set
+          if [ ! -f "capacitor.config.ts" ]; then
+            echo "Error: capacitor.config.ts is missing"
+            exit 1
+          fi
+          
+          # Add android platform if it doesn't exist
           if [ ! -d "android" ]; then
             npx cap add android
           fi
