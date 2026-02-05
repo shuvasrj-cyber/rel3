@@ -166,7 +166,7 @@ const App: React.FC = () => {
         )}
       </main>
 
-      {/* Bottom Navigation (Sticky Call-to-Action) */}
+      {/* Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 md:relative bg-white border-t p-2 flex justify-around shadow-[0_-4px_10px_rgba(0,0,0,0.05)] z-20">
         <button 
           onClick={() => setView('home')}
