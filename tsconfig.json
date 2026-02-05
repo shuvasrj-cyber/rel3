@@ -11,23 +11,13 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
-    "rootDir": "."
+    "baseUrl": "."
   },
-  "include": [
-    "*.ts",
-    "*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "android"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "dist", "android"]
 }
