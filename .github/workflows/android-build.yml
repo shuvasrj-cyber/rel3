@@ -32,13 +32,12 @@ jobs:
 
       - name: Initialize Capacitor Android
         run: |
-          # Ensure capacitor is initialized and the app id is set
           if [ ! -f "capacitor.config.ts" ]; then
             echo "Error: capacitor.config.ts is missing"
             exit 1
           fi
           
-          # Add android platform if it doesn't exist
+          # Only add the android platform if the folder doesn't exist in the repo
           if [ ! -d "android" ]; then
             npx cap add android
           fi
